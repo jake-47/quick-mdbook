@@ -1,0 +1,33 @@
+[book]
+authors = ["Jake"]
+title = "Your Book Title"
+description = "Your book description"
+language = "en"
+src = "src"
+
+[build]
+build-dir = "book"
+
+[preprocessor.katex]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.0.3" # do not edit: managed by `mdbook-admonish install`
+
+[preprocessor.pagetoc]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output.html]
+additional-css = [
+    "./theme/mdbook-admonish.css",
+    "./theme/pagetoc.css"
+, "./mdbook-admonish.css"]
+additional-js = [
+    "./theme/pagetoc.js",
+    "./theme/mermaid.min.js", 
+    "./theme/mermaid-init.js"
+]
+
+[output.linkcheck]
